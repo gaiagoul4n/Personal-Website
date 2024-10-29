@@ -26,6 +26,10 @@
     border: 8px solid #545E78;
     margin: 34px;
   }
+
+  .main-image:hover {
+    border-color: #424a5f;
+  }
   
   .text {
     align-self: flex-start;
@@ -68,6 +72,12 @@
     letter-spacing: -0.64px;
     text-transform: uppercase;
   }
+
+  .text h1:hover {
+    text-decoration: underline;
+    transform: scale(1.02);
+    text-decoration-color: #2F3A60;
+  }
   .text h5 {
 color: #3D4B7B;
 font-family: Ubuntu;
@@ -75,4 +85,9 @@ font-size: 27px;
 font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 40.5px */
+  }
+
+  .text h5:hover {
+    transform: scale(1.02);
+    color: #3c4768;
   }
