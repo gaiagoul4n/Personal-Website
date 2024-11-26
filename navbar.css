@@ -1,13 +1,30 @@
 /* Navbar Styling */
 .navbar {
-    padding: 15px 30px;
+    padding: 25px 30px 15px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid #2F3A60;
+    align-items: center;
+    border-bottom: 3px solid #2F3A60;
+    overflow-x: hidden;
+  }
+
+  /* Mini Navbar */
+.mini-navbar {
+    position: fixed; /* Keeps the mini-navbar at the top right */
+    top: 80px; /* Adjust to sit below the main navbar */
+    right: 20px; /* Push to the far right of the page */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    gap: 15px; /* Space between buttons */
+    padding: 10px; /* Optional padding around the buttons */
+    z-index: 999; /* Ensure it stays on top of other content */
+    width: auto; /* Ensures the mini-navbar only takes up as much space as needed */
+    height: auto; /* Adjusts height based on content */
   }
   
   .navbar-menu {
@@ -18,7 +35,7 @@
   }
   
   .navbar-menu li {
-    margin: 0 30px;
+    margin: 0 45px;
   }
 
   .navbar-menu li:hover {
@@ -41,9 +58,48 @@
   .navbar-menu a:hover {
     color: #1c2239; /* Accent color for hover */
   }
-  
-  /* Add padding to the body to prevent content from overlapping with the fixed navbar */
-  body {
-    padding-top: 60px;
+
+  /* Buttons Section (Aligned Right) */
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+    margin-right: 5%;
   }
+
+  .button {
+    width: 65px;
+    height: 65px;
+    opacity: 0.65;
+  }
+
+  .button img {
+    width: inherit;
+    height: inherit;
+  }
+
+  .button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+
+  /* Mobile-Specific Styles */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    width: 100%;
+    justify-content: center; /* Spread links across the row */
+    gap: 3px; /* Smaller spacing between links */
+    padding: 0 0;
+  }
+
+  .navbar-menu li {
+    margin: 0 0;
+  }
+
+  .navbar-menu a {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 5px; /* Compact padding inside links */
+  }
+}
   
