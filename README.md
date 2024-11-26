@@ -25,10 +25,10 @@ Check out the live website here: [gaiagoulandris.com](https://www.gaiagoulandris
 ## Technologies Used
 
 - **Frontend**:
-  - HTML5
-  - CSS3
+  - HTML
+  - CSS
   - JavaScript
-  - Frameworks/Libraries (if used, e.g., React.js, Bootstrap)
+  - Bootstrap
 - **Version Control**:
   - Git and GitHub
 - **Deployment**:
