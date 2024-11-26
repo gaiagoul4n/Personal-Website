@@ -46,4 +46,24 @@
   body {
     padding-top: 60px;
   }
+
+
+  /* Mobile-Specific Styles */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    width: 100%;
+    justify-content: center; /* Spread links across the row */
+    gap: 3px; /* Smaller spacing between links */
+    padding: 0 0;
+  }
+
+  .navbar-menu li {
+    margin: 0 0;
+  }
+
+  .navbar-menu a {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 5px; /* Compact padding inside links */
+  }
+}
   
