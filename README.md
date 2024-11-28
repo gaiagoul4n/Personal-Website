@@ -18,7 +18,7 @@ Check out the live website here: [gaiagoulandris.com](https://www.gaiagoulandris
 - **Contact Section**:
   - Links to my LinkedIn, GitHub, and email.
 - **Responsive Design**:
-  - Fully optimized for desktop, tablet, and mobile devices.
+  - Fully optimized for desktop.
 
 ---
 
