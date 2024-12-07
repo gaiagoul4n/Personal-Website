@@ -2,7 +2,6 @@
 
 A modern, responsive portfolio website showcasing my journey as a Computer Science student at Georgetown University, featuring my projects, technical skills, and professional experience.
 
-![Website Preview](assets/preview.png)
 
 ## 🌐 Live Site
 
