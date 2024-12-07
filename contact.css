@@ -1,0 +1,70 @@
+/* Contact Section Styling */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    background: #B8BDC9;
+    border: 3px solid #545E78;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    border-color: #424a5f;
+    transform: translateY(-5px);
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    opacity: 0.65;
+    background: transparent;
+  }
+  
+  .contact-card h3 {
+    color: #2F3A60;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: inherit;
+  }
+  
+  .contact-link {
+    color: #3D4B7B;
+    font-family: Ubuntu;
+    font-size: 18px;
+    text-decoration: none;
+    background: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #2F3A60;
+    text-decoration: underline;
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .contact-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }

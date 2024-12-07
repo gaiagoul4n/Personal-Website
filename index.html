@@ -6,6 +6,8 @@
     <title>Gaia Goulandris</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -52,38 +54,190 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
       <h2>My Projects</h2>
-      <ul>
-        <li>
-          <strong>Project 1:</strong> description.
-        </li>
-        <li>
-          <strong>Project 2:</strong> description.
-        </li>
-        <li>
-          <strong>Project 3:</strong> description.
-        </li>
-      </ul>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>School Book Trading Platform</h3>
+          <div class="project-images">
+            <img src="assets/projects/bookstore-interface.png" alt="School Bookstore Interface" class="project-image"/>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-overview">
+              <p class="project-description">
+              Developed a full-stack web application that facilitates sustainable book sharing within my secondary school 
+              community. The platform implements a credit-based economy where students can trade books without monetary 
+              transactions, encouraging book reuse and equal access to educational resources.
+              </p>
+            </div>
+
+            <div class="key-features">
+              <h4>Core Features:</h4>
+              <ul>
+                <li>Dynamic book catalog with image support and advanced search functionality and pagination</li>
+                <li>Automated credit management system handling user balances and transactions</li>
+                <li>Intuitive book listing workflow with pre-filling for existing books</li>
+                <li>Comprehensive user dashboard tracking purchases, sales, and credit history</li>
+                <li>Responsive, mobile-friendly interface using Bootstrap</li>
+              </ul>
+            </div>
+    
+            <div class="implementation-details">
+              <details>
+                <summary>Technical Implementation</summary>
+                <div class="tech-sections">
+                  <div class="backend-section">
+                    <h5>Backend Architecture</h5>
+                    <ul>
+                      <li>Flask-based RESTful architecture with modular routing</li>
+                      <li>SQLAlchemy ORM with three-table relational database design</li>
+                      <li>Secure user authentication using Flask-Login and Bcrypt</li>
+                      <li>Automated image processing and storage for book covers</li>
+                    </ul>
+                  </div>
+                  <div class="frontend-section">
+                    <h5>Frontend Features</h5>
+                    <ul>
+                      <li>Jinja2 templating with template inheritance</li>
+                      <li>Responsive grid layout for book catalog</li>
+                      <li>Form validation with WTForms</li>
+                      <li>Custom styling with Bootstrap integration</li>
+                    </ul>
+                  </div>
+                  <div class="database-section">
+                    <h5>Data Management</h5>
+                    <ul>
+                      <li>Efficient book deduplication system</li>
+                      <li>Transaction tracking and credit balance management</li>
+                      <li>Paginated search results for performance</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+    
+            <div class="tech-stack">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLAlchemy</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Jinja2</span>
+                <span class="tech-tag">WTForms</span>
+                <span class="tech-tag">Bcrypt</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+            </div>
+
+    
+            <div class="project-highlights">
+              <details>
+                <summary>Technical Documentation</summary>
+                <div class="documentation-preview">
+                  <div class="documentation-section">
+                    <h5>System Architecture</h5>
+                    <img src="assets/projects/system-diagram.png" alt="System Architecture Diagram" />
+                  </div>
+                  <div class="documentation-section">
+                    <h5>Database Schema</h5>
+                    <img src="assets/projects/database-design.png" alt="Database Schema Design" />
+                  </div>
+                </div>
+              </details>
+            </div>
+    
+            <div class="project-links">
+              <a href="https://github.com/gaiagoul4n/Book-Trading-Credit-System" target="_blank" class="project-link github">
+                <img src="assets/github_black_logo.png" alt="GitHub" />
+                View Code
+              </a>
+              <a href="assets/project_documentation.pdf" target="_blank" class="project-link doc">
+                <img src="assets/pdf-icon.png" alt="PDF" />
+                View Complete Documentation
+              </a>
+              <!-- If you have a demo video 
+              <a href="[demo-video-link]" target="_blank" class="project-link demo">
+                <img src="assets/video-icon.png" alt="Demo" />
+                Watch Demo
+              </a> -->
+            </div>
+    
+            <div class="future-development">
+              <h4>Planned Enhancements:</h4>
+              <ul>
+                <li>AI-powered book recommendations based on user trading history</li>
+                <li>Personal reading list management system</li>
+                <li>Advanced filtering system for genre, condition, and credit range</li>
+                <li>A fair credit allocation algorithm based on book conditions and demand</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Template for future projects -->
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <div class="project-content">
+            <p class="project-description">
+              Description of your next project will go here.
+            </p>
+            <!-- Same structure as above -->
+          </div>
+        </div>
+
+        <!-- Placeholder for your next project -->
+        <div class="project-card">
+          <h3>More Projects Coming Soon</h3>
+          <p>Currently working on exciting new projects. Check back soon!</p>
+        </div>
+      </div>
     </section>
 
     <!-- Resume Section -->
     <section id="resume" class="section">
       <h2>Resume</h2>
-      <p>
-        Download my resume <a href="assets/resume.pdf" target="_blank">here</a>.
-      </p>
+      <div class="resume-container">
+        <div class="resume-preview">
+          <embed
+            src="assets/resume.pdf"
+            type="application/pdf"
+            class="resume-embed"
+          />
+        </div>
+        <div class="resume-actions">
+          <a href="assets/resume.pdf" download class="resume-button">
+            <img src="assets/download-button.png" alt="Download" class="button-icon"/>
+            <span class="button-text">Download Resume</span>
+          </a>
+          <a href="assets/resume.pdf" target="_blank" class="resume-button">
+            <span class="button-text">Open in New Tab</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
       <h2>Contact Me</h2>
-      <p>
-        Feel free to reach out to me via:
-      </p>
-      <ul>
-        <li>Email: <a href="mailto:gag83@georgetown.edu">gag83@georgetown.edu</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/gaia-goulandris" target="_blank">Gaia Goulandris</a></li>
-        <li>GitHub: <a href="https://github.com/gaiagoul4n" target="_blank">gaiagoul4n</a></li>
-      </ul>
+      <div class="contact-container">
+        <div class="contact-card">
+          <img src="assets/email-logo.png" alt="Email" class="contact-icon"/>
+          <h3>Email</h3>
+          <a href="mailto:gag83@georgetown.edu" class="contact-link">gag83@georgetown.edu</a>
+        </div>
+    
+        <div class="contact-card">
+          <img src="assets/black_linkedin.png" alt="LinkedIn" class="contact-icon"/>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/gaia-goulandris" target="_blank" class="contact-link">Gaia Goulandris</a>
+        </div>
+    
+        <div class="contact-card">
+          <img src="assets/github_black_logo.png" alt="GitHub" class="contact-icon"/>
+          <h3>GitHub</h3>
+          <a href="https://github.com/gaiagoul4n" target="_blank" class="contact-link">gaiagoul4n</a>
+        </div>
+      </div>
     </section>
   </body>
 </html>
