@@ -195,6 +195,37 @@
   .documentation-preview * {
     background: #B8BDC9;
   }
+
+  .documentation-section {
+    margin-bottom: 30px;
+    background: #B8BDC9;
+  }
+
+  .documentation-section h5 {
+      margin-bottom: 15px;
+      color: #2F3A60;
+      font-family: Ubuntu;
+      font-size: 20px;
+      font-weight: 600;
+      background: inherit;
+  }
+
+  .documentation-section img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 8px;
+      border: 3px solid #545E78;
+      margin: 10px 0;
+      background: white; /* White background for diagrams */
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+
+  .documentation-section img:hover {
+      transform: scale(1.02);
+      border-color: #424a5f;
+  }
   
   
   /* Mobile Responsiveness */
@@ -217,5 +248,9 @@
   
     .tech-sections {
       grid-template-columns: 1fr;
+    }
+
+    .documentation-section img {
+      padding: 10px;
     }
   }
