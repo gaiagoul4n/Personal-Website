@@ -35,11 +35,30 @@
   
   .project-image {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 10px;
+    padding: 15px 0px;
   }
+
+  .project-image:hover {
+      transform: scale(1.02);
+      border-color: #424a5f;
+  }
+
+  .project-card summary {
+    background: #B8BDC9;
+    cursor: pointer;
+    color: #2F3A60;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .project-card details {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
   
   .project-description {
     color: #3D4B7B;
