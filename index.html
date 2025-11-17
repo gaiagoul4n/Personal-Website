@@ -12,6 +12,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".navbar-menu a[href^='#']");
+  
+      // Helper to clear all active states
+      function clearActive() {
+        navLinks.forEach(link => link.classList.remove("active"));
+      }
+  
+      // IntersectionObserver to watch which section is in view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              const activeLink = document.querySelector(`.navbar-menu a[href="#${id}"]`);
+              if (activeLink) {
+                clearActive();
+                activeLink.classList.add("active");
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          threshold: 0.4,             // section is “active” when ~40% visible
+        }
+      );
+  
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -23,31 +56,36 @@
       </ul>
      </nav> 
 
-    <!-- Mini Navbar -->
-    <div class="mini-navbar">
-      <a href="https://github.com/gaiagoul4n" class="button">
-        <img src="assets/github_black_logo.png" alt="GitHub" />
-      </a>
-      <a href="mailto:gag83@georgetown.edu" class="button">
-        <img src="assets/email-logo.png" alt="Email" />
-      </a>
-      <a href="https://www.linkedin.com/in/gaia-goulandris" class="button">
-        <img src="assets/black_linkedin.png" alt="LinkedIn" />
-      </a>
-    </div>
-
     <!-- Main Content -->
-    <section id="about" class="main-section"></section>
-      <div class="container">
+    <section id="about" class="main-section">
+      <div class="about-hero">
+    
+        <!-- top row: headshot + name -->
+        <div class="about-hero-top">
           <img src="assets/headshot.png" alt="Gaia Goulandris" class="main-image" />
-          <div class="text">
-            <h1>Gaia Goulandris</h1>
-            <h5>
-              I'm a junior at Georgetown University studying Computer Science. 
-              I'm passionate about software development, product management, and solving real-world problems
-              through creating innovative solutions that leave an impact.
-            </h5>
+          <h1 class="hero-name">GAIA GOULANDRIS</h1>
+          <div class="ghost"></div>
         </div>
+    
+        <!-- centered paragraph underneath -->
+        <h5 class="hero-summary">
+          I'm a senior at Georgetown University studying Computer Science. I'm passionate about software development, 
+          product management, and solving real-world problems through creating innovative solutions that leave an impact.
+        </h5>
+    
+        <!-- buttons underneath -->
+        <div class="social-buttons">
+          <a href="https://github.com/gaiagoul4n" target="_blank" class="social-btn">
+            <img src="assets/github_black_logo.png" alt="GitHub" />
+          </a>
+          <a href="mailto:gag83@georgetown.edu" class="social-btn">
+            <img src="assets/email-logo.png" alt="Email" />
+          </a>
+          <a href="https://www.linkedin.com/in/gaia-goulandris" target="_blank" class="social-btn">
+            <img src="assets/black_linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
+    
       </div>
     </section>
 

@@ -1,45 +1,145 @@
-* {
-    margin: 0;
-    padding: 0;
-    background: #C3C8D5;
-  }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(135, 182, 239, 0.6), transparent 70%),
+    radial-gradient(circle at bottom right, rgba(61, 152, 231, 0.6), transparent 60%),
+    #ffffff;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+  color: #2F3A60;
+}
 
   html {
     scroll-padding-top: 100px;
   }
 
-  .container {
+
+  .about-hero {
+    min-height: calc(100vh - 90px); /* ensures hero fills the full screen */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center;         /* centers content vertically */
     align-items: center;
-    height: 100vh;
-    width: 90%;
-    margin: 0 auto;
+    padding-top: 40px;               /* reduce padding so hero fits better */
+    padding-bottom: 40px;
+    text-align: center;
   }
+    
+    .about-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      gap: 32px;
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+    }
+    
+    /* circular headshot */
+    .about-hero-top .main-image {
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #545E78;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.18);
+      flex-shrink: 0;
+    }
 
-  .main-image {
-    max-width: 400px;
-    height: auto;
-    border-radius: 38px;
-    border: 8px solid #545E78;
-    margin: 34px;
-  }
+    /* Hover for image */
+    .about-hero-top .main-image:hover {
+      transform: scale(1.03);
+      border-color: #424a5f;
+    }
+    
+    /* Name next to photo */
+    .hero-name {
+      flex-grow: 1;
+      text-align: center;
+      min-width: 650px;
+      font-size: 60px;
+      font-weight: 700;
+      
+      text-transform: uppercase;
+    
+      transition: transform 0.2s ease, text-decoration-color 0.2s ease;
+    }
 
-  .main-image:hover {
-    border-color: #424a5f;
-  }
+    /* Hover for name */
+    .hero-name:hover {
+      transform: scale(1.03);
+      text-decoration: underline;
+      text-decoration-color: #2F3A60;
+    }
+
+    .ghost {
+      width: 270px;   /* same width as the headshot */
+      flex-shrink: 0;
+    }
+    
+    /* About paragraph */
+    .hero-summary {
+      max-width: 650px;
+      font-size: 24px;
+      line-height: 1.8;
+      font-weight: 400;
+      margin: -50px auto 20px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    /* Hover for paragraph */
+    .hero-summary:hover {
+      transform: scale(1.01);
+      color: #3c4768;
+    }
+
+    .social-buttons {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
   
-  .text {
-    align-self: flex-start;
-    margin-top: 200px;
-    margin-right: 150px;
-    padding-left: 70px;
-  }
+    .social-btn {
+      width: 60px;
+      height: 60px;
+      opacity: 0.65;
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+  
+    .social-btn img {
+      width: inherit;
+      height: inherit;
+    }
+    
+    .social-btn:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    
 
   .section {
+    justify-content: center;
     padding: 0% 10% 5%; /* Add space around content */
     max-width: 80%; /* Limit section width */
     font-family: Ubuntu;
+    margin-top: 90px;
+    margin-bottom: 50px;
   }
 
   .section h2 {
@@ -53,7 +153,7 @@
   
   .section p,
   .section ul {
-    color: #545E78;
+    color: #2F3A60;
     font-size: 28px;
     line-height: 1.6;
     margin-left: 5%;
@@ -73,6 +173,7 @@
     text-decoration: underline;
   }
   
+
 
 
 /* Mobile-specific styles */
@@ -197,7 +298,6 @@
 .resume-button {
   padding: 12px 24px;
   border-radius: 8px;
-  background: #B8BDC9; /* Slightly darker than the main background */
   color: #545E78;
   text-decoration: none;
   font-family: Ubuntu;
